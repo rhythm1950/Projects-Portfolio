@@ -1,10 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SR Water Kingdom</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Projects" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <title>My Web Projects</title>
+    <!-- Bootstrap css cdn -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional css files -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="logo">
+      <h1>Projects</h1>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#1"
+            ><img src="assets/images/icon-1.png" alt="" />
+            <em>Green Restaurant</em></a
+          >
+        </li>
+        <li>
+          <a href="#2"
+            ><img src="assets/images/icon-2.png" alt="" />
+            <em>Paradise Flights</em></a
+          >
+        </li>
+        <li>
+          <a href="#3"
+            ><img src="assets/images/icon-3.png" alt="" />
+            <em>Westwood Academy</em></a
+          >
+        </li>
+        <li>
+          <a href="#4"
+            ><img src="assets/images/icon-4.png" alt="" />
+            <em>Ryan Construction</em></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="slides">
+      <div class="slide" id="1">
+        <div id="slider-wrapper">
+          <div id="image-slider">
+            <ul>
+              <li class="active-img">
+                <div class="slide-caption"></div>
+              </li>
+              <li>
+                <div class="slide-caption"></div>
+              </li>
+              <li>
+                <div class="slide-caption"></div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="thumbnail">
+            <ul>
+              <li class="active">
+                <img src="assets/images/Restaurant.png" alt="" />
+              </li>
+              <li><img src="assets/images/Dog Training.PNG" alt="" /></li>
+              <li><img src="assets/images/Barcelona.png" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="2">
+        <div class="content second-content">
+          <div id="tabs"></div>
+        </div>
+      </div>
+
+      <div class="slide" id="3">
+        <div class="content third-content"></div>
+      </div>
+
+      <div class="slide" id="4">
+        <div class="content fourth-content"></div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Js -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // navigation click actions
+        $(".scroll-link").on("click", function (event) {
+          event.preventDefault();
+          var sectionID = $(this).attr("data-id");
+          scrollToID("#" + sectionID, 750);
+        });
+        // mobile nav toggle
+        $("#nav-toggle").on("click", function (event) {
+          event.preventDefault();
+          $("#main-nav").toggleClass("open");
+        });
+      });
+      // scroll function
+      function scrollToID(id, speed) {
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $("#main-nav");
+        $("html,body").animate({ scrollTop: targetOffset }, speed);
+        if (mainNav.hasClass("open")) {
+          mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+          mainNav.removeClass("open");
+        }
+      }
+      if (typeof console === "undefined") {
+        console = {
+          log: function () {},
+        };
+      }
+    </script>
+  </body>
 </html>
