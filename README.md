@@ -25,5 +25,5 @@ This is a portfolio gallery. I have developed it using HTML, CSS, JavaScript, JQ
 
 
 ### Website Preview:
-<img src="./img/My-Web-Projects.png" alt="My Web Projects">
+<img src="./assets/images/My-Web-Projects.png" alt="My Web Projects">
 
