@@ -1,5 +1,5 @@
 # Projects Portfolio Gallery
-This is a portfolio gallery. I have developed it using HTML, CSS, JavaScript, JQuery, Bootstrap.
+This is a portfolio gallery. I have developed it using HTML, CSS, JavaScript, jQuery, Bootstrap.
 
 ### Deployment
 | Environment | Link |
