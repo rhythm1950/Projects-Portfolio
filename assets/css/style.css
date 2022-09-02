@@ -668,3 +668,9 @@ nav a::before {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 768px) {
+  nav,
+  .logo {
+    display: none;
+  }
+}
